@@ -3,6 +3,10 @@ from agents.retriever import RetrieverAgent
 from agents.gpt_answer import GPTAnswerAgent
 
 def clean_tariff_data(file_path):
+    #Get the absolute path relative to this script's location
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    full_path = os.path.join(base_dir, file_path)
+
     df = pd.read_csv(file_path)
     df["TariffsCharged2USA"] = df["TariffsCharged2USA"].str.replace('%', '').astype(float)
     df["USAReciprocalTariffs"] = df["USAReciprocalTariffs"].str.replace('%', '').astype(float)
