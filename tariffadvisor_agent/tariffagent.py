@@ -1,6 +1,7 @@
 import pandas as pd
 from agents.retriever import RetrieverAgent
 from agents.gpt_answer import GPTAnswerAgent
+import os
 
 def clean_tariff_data(file_path):
     #Get the absolute path relative to this script's location
