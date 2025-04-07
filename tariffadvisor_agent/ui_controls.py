@@ -75,6 +75,7 @@ def render_chat_panel(agent):
     chat_html = '''
     <style>
         .chat-container {
+            min-height: 200px; /* ✅ Ensures visible height even with no chats */
             max-height: 350px;
             overflow-y: auto;
             border: 1px solid #ccc;
